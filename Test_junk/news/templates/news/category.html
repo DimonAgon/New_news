@@ -1,0 +1,36 @@
+
+{% extends 'base.html'%}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block sidebar %}{% include 'inc/_sidebar.html' %}{% endblock %}
+
+{% block content %}
+
+    {% for n in news_var %}
+        <div class="card mb-3">
+
+            <div class="card-header">
+               <span>&#8203</span>
+            </div>
+            <div class="card-body">
+                <div class="media">
+
+                    {% if n.photo %}
+                        <img src="{{ n.photo.url }}">
+                    {% endif %}
+
+                    <div class="media-body">
+                        <h5 class="card-title {% if n.is_published %} text-success {% else %} text-danger {% endif %}">
+                            {{ n.title|capfirst }}</h5>
+                        <p class="card-text">{{ n.content }}</p>
+                        <a href="#" class="btn btn-primary">Еще...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer text-muted">
+                {{ n.created_at|date:"Y-m-d H:i" }}
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
