@@ -11,6 +11,9 @@ class News(models.Model):
     is_published = models.BooleanField(default=True, verbose_name="Опубликовано")
     category = models.ForeignKey('Category', blank=True, on_delete=models.SET_NULL, null=True, verbose_name="Категория")
 
+    def get_absolute_url(self):
+        return reverse_lazy('news', kwargs={'news_id': self.pk})
+
     def __str__(self):
         return self.title
 

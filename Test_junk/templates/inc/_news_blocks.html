@@ -1,0 +1,40 @@
+
+{% for n in news_var %}
+
+    <div class="card mb-3">
+
+        <div class="card-header">
+
+            <! parameter >
+            {% if parameter !=  category_page %}
+
+                {% if n.category %}
+                Категория: <a href="{{ n.category.get_absolute_url }}">{{ n.category }}</a>
+                {% else %}
+                Без категории
+                {% endif %}
+
+            {% else %}
+                <span>&#8203</span>
+            {% endif %}
+        </div>
+        <div class="card-body">
+            <div class="media">
+
+                {% if n.photo %}
+                    <img src="{{ n.photo.url }}">
+                {% endif %}
+
+                <div class="media-body">
+                    <h5 class="card-title {% if n.is_published %} text-success {% else %} text-danger {% endif %}">
+                        {{ n.title|capfirst }}</h5>
+                    <p class="card-text">{{ n.content }}</p>
+                    {% if parameter != 'news_page' %} <a href="{{ n.get_absolute_url }}" class="btn btn-primary">Еще...</a> {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="card-footer text-muted">
+            {{ n.created_at|date:"Y-m-d H:i" }}
+        </div>
+    </div>
+{% endfor %}
