@@ -5,4 +5,4 @@
 
 {% block sidebar %}<div class="col-md-3">{% include 'inc/_sidebar.html' %}</div>{% endblock %}
 
-{% block content %}<div class="col-md-9">{% include 'inc/_news_blocks.html' %}</div>{% endblock %}
+{% block content %}<div class="col-md-9">{% include 'inc/_news_blocks.html' with category_ref_path="./content/news_blocks/category_page/_category_ref.html" %}</div>{% endblock %}

@@ -1,0 +1,26 @@
+body {
+    background-color: #ecf0ff;
+}
+
+.card .card-body .cropped {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.card .card-body .btn {
+    background-color: #8391f7;
+    border: #8391f7;
+}
+
+.card .card-body .btn:hover {
+    background-color: #a6b0f5;
+    border: #8391f7;
+}
+
+.card .card-header a {
+    color: #8391f7;
+    text-decoration-color: #8391f7;
+}

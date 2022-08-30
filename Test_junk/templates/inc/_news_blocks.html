@@ -1,4 +1,5 @@
 
+
 {% for n in news_var %}
 
     <div class="card mb-3">
@@ -6,17 +7,10 @@
         <div class="card-header">
 
             <! parameter >
-            {% if parameter !=  category_page %}
+            <! category reference block>
+                {% include category_ref_path|default:"./content/news_blocks/main_page/_category_ref.html" %}
+            <! category reference block>
 
-                {% if n.category %}
-                Категория: <a href="{{ n.category.get_absolute_url }}">{{ n.category }}</a>
-                {% else %}
-                Без категории
-                {% endif %}
-
-            {% else %}
-                <span>&#8203</span>
-            {% endif %}
         </div>
         <div class="card-body">
             <div class="media">
@@ -26,10 +20,12 @@
                 {% endif %}
 
                 <div class="media-body">
-                    <h5 class="card-title {% if n.is_published %} text-success {% else %} text-danger {% endif %}">
-                        {{ n.title|capfirst }}</h5>
-                    <p class="card-text">{{ n.content }}</p>
-                    {% if parameter != 'news_page' %} <a href="{{ n.get_absolute_url }}" class="btn btn-primary">Еще...</a> {% endif %}
+
+                    <! parameter >
+                    <! news display block >
+                        {% include news_display_path|default:"./content/news_blocks/main_page/_news_display.html" %}
+                    <! news display block >
+
                 </div>
             </div>
         </div>
