@@ -5,7 +5,7 @@
 
 {% block sidebar %}<div class="col-md-3">{% include 'inc/_sidebar.html' %}</div>{% endblock %}
 
-{% block content %}<div class="col-md-9">{% include 'inc/_news_blocks.html' %}</div>{% endblock %}
+{% block content %}<div class="col-md-9">{% for n in news_var %}{% include 'inc/_news_blocks.html' %}{% endfor %}</div>{% endblock %}
 
 
 

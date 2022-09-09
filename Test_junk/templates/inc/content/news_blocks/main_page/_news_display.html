@@ -1,5 +1,5 @@
 
-<h5 class="card-title {% if n.is_published %} text-success {% else %} text-danger {% endif %}">
+<h5 class="card-title mt-3 {% if n.is_published %} text-success {% else %} text-danger {% endif %}">
     {{ n.title|capfirst }}</h5>
 <p class="card-text cropped">{{ n.content }}</p>
     <a href="{{ n.get_absolute_url }}" class="btn btn-primary">Еще...</a>

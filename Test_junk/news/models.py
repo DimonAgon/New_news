@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse_lazy
 
+
 class News(models.Model):
 
     title = models.CharField(max_length=60, verbose_name="Заголовок")
@@ -36,3 +37,4 @@ class Category(models.Model):
         verbose_name = "Категория"
         verbose_name_plural = "Категории"
         ordering = ['title']
+
