@@ -19,6 +19,10 @@ body {
   border: #8391f7;
 }
 
+.card .card-header, .card-footer {
+  max-height: 40px;
+}
+
 .card .card-header a {
   color: #8391f7;
   text-decoration-color: #8391f7;
@@ -36,6 +40,16 @@ form .card .card-header input.news-form.title-form {
 form .card .card-body textarea.news-form.content-form {
   min-width: 100%;
   overflow: hidden;
+}
+
+form .card .card-footer .clock-bar * {
+  display: inline;
+}
+form .card .card-footer .clock-bar .date, form .card .card-footer .clock-bar .time {
+  margin-left: 4px;
+}
+form .card .card-footer .clock-bar .date span, form .card .card-footer .clock-bar .time span {
+  margin-left: -4px;
 }
 
 /*# sourceMappingURL=News_block.css.map */

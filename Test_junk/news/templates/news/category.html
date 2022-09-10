@@ -5,4 +5,4 @@
 
 {% block sidebar %}<div class="col-md-3">{% include 'inc/_sidebar.html' %}</div>{% endblock %}
 
-{% block content %}<div class="col-md-9">{% for n in news_var %}{% include 'inc/_news_blocks.html' with category_ref_path="./content/news_blocks/category_page/_category_ref.html" %}{% endfor %}</div>{% endblock %}
+{% block content %}<div class="col-md-9">{% for n in news_var %}{% include 'inc/_news_blocks.html' with card_header_content_path="./content/news_blocks/category_page/_category_ref.html" %}{% endfor %}</div>{% endblock %}

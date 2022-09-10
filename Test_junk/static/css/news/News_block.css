@@ -38,4 +38,8 @@ form .card .card-body textarea.news-form.content-form {
   overflow: hidden;
 }
 
+form .card .card-footer .clock-bar {
+  display: inline;
+}
+
 /*# sourceMappingURL=News_block.css.map */
