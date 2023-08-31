@@ -1,0 +1,40 @@
+
+
+
+
+<div class="card mb-3">
+
+    <div class="card-header">
+
+        <! parameter >
+        <! category reference block>
+            {% include card_header_content_path|default:"./content/news_blocks/main_page/_category_ref.html" %}
+        <! category reference block>
+
+    </div>
+    <div class="card-body">
+        <div class="media">
+
+            <! parameter >
+            <! photo frame block >
+                {% include photo_frame_path|default:"./content/news_blocks/main_page/_photo_frame.html" %}
+            <!photo frame block >
+
+            <div class="media-body">
+
+                <! parameter >
+                <! news display block >
+                    {% include news_display_path|default:"./content/news_blocks/main_page/_news_display.html" %}
+                <! news display block >
+
+            </div>
+        </div>
+    </div>
+    <div class="card-footer text-muted">
+
+        <!parameter>
+        <!date field block>
+            {% include card_footer_content_path|default:"./content/news_blocks/main_page/_date_field.html" %}
+        <!date field block>
+    </div>
+</div>
